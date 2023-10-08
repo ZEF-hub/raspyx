@@ -12,6 +12,7 @@ body
         .sidebar
             display: grid
             align-items: center
+            text-align: center
             color: #fffefe
             background-color: #1e1e1e
             margin-top: 0
@@ -27,15 +28,26 @@ body
                 grid-template-columns: 1fr 1fr
                 .t-inputs
                     display: grid
-                    grid-template-rows: 1fr 1fr
+                    grid-template-columns: 1fr 1fr
                     justify-items: right
                     a
                         color: inherit
                         text-decoration: none
-                        font-size: 16px
+                        .calendar
+                            min-width: 200px
+                            min-height: 40px
+                            text-align: center
+                            font-size: 16px
+                            background-color: #f8f8f8
+                            border-radius: 5px
+                            display: flex
+                            justify-content: left
+                            img
+                                margin-left: 20px
+                                margin-right: 10px
                 .t-links
                     display: grid
-                    grid-template-rows: 1fr 1fr
+                    grid-template-columns: 1fr 1fr
                     a
                         color: inherit
                         text-decoration: none
@@ -69,6 +81,8 @@ body
                         background-color: #dddddd
                         margin: 10px
                         min-height: 120px
+                    .mn-wdth
+                        min-width: 170px
                     
     footer 
         display: grid
