@@ -26,13 +26,14 @@ body main .sidebar a {
   text-decoration: none;
 }
 body main .content {
-  margin: 7vh 4vw 0 4vw;
+  margin: 7vh 4vw 2vh 4vw;
   display: grid;
   grid-template-rows: 70px auto;
 }
 body main .content .top {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  max-height: 40px;
 }
 body main .content .top .t-links {
   display: grid;
@@ -99,7 +100,7 @@ body main .content .schedule .pairs div {
   margin: 10px 5px 10px 0px;
   align-self: start;
   min-height: 300px;
-  max-height: 57vh;
+  max-height: 53vh;
 }
 body main .content .schedule .pairs .m-all {
   margin: 10px 5px 10px 5px;
