@@ -26,7 +26,7 @@ body main .sidebar a {
   text-decoration: none;
 }
 body main .content {
-  margin: 7vh 4vw 2vh 4vw;
+  margin: 7vh 4vw 0 4vw;
   display: grid;
   grid-template-rows: 70px auto;
 }
@@ -34,9 +34,21 @@ body main .content .top {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+body main .content .top .t-links {
+  display: grid;
+  grid-template-columns: 300px 300px 1fr;
+}
+body main .content .top .t-links a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 16px;
+  max-height: 40px;
+  display: flex;
+  align-items: center;
+}
 body main .content .top .t-inputs {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 250px 250px;
   justify-items: right;
 }
 body main .content .top .t-inputs a {
@@ -44,27 +56,23 @@ body main .content .top .t-inputs a {
   text-decoration: none;
 }
 body main .content .top .t-inputs a .calendar {
-  min-width: 200px;
+  width: 200px;
   min-height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
   text-align: center;
   font-size: 16px;
   background-color: #f8f8f8;
   border-radius: 5px;
   display: flex;
-  justify-content: left;
+  align-items: center;
+  justify-content: space-between;
 }
-body main .content .top .t-inputs a .calendar img {
-  margin-left: 20px;
-  margin-right: 10px;
+body main .content .top .t-inputs a .calendar .left {
+  order: -1;
 }
-body main .content .top .t-links {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-body main .content .top .t-links a {
-  color: inherit;
-  text-decoration: none;
-  font-size: 16px;
+body main .content .top .t-inputs a .calendar .right {
+  order: 1;
 }
 body main .content .schedule {
   display: grid;
@@ -88,8 +96,10 @@ body main .content .schedule .pairs div {
   background-color: #f8f8f8;
   border-radius: 15px;
   overflow-y: auto;
-  max-height: 450px;
   margin: 10px 5px 10px 0px;
+  align-self: start;
+  min-height: 300px;
+  max-height: 57vh;
 }
 body main .content .schedule .pairs .m-all {
   margin: 10px 5px 10px 5px;
@@ -97,20 +107,20 @@ body main .content .schedule .pairs .m-all {
 body main .content .schedule .pairs .m-right {
   margin: 10px 0px 10px 5px;
 }
+body main .content .schedule .pairs .mn-wdth {
+  min-width: 170px;
+}
 body main .content .schedule .pairs .pair {
   background-color: #dddddd;
   margin: 10px;
-  min-height: 120px;
-}
-body main .content .schedule .pairs .mn-wdth {
-  min-width: 170px;
+  min-height: 180px;
 }
 body footer {
   display: grid;
   grid-template-rows: 1fr 25px;
   color: #fffefe;
   background-color: #1e1e1e;
-  height: clamp(200px, 25vh, 300px);
+  height: 200px;
 }
 body footer .ft-links {
   padding: 30px;
