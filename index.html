@@ -10,6 +10,7 @@
     <title>Raspyx</title>
 </head>
 <body>
+    <script src="./js/script.js"></script>
     <header></header>
     <main>
         <div class="sidebar">
@@ -51,57 +52,336 @@
             <div class="schedule">
                 <div class="days">
                     <span class="d-monday">
-                        <p>Понедельник<br />18</p>
+                        <p>Понедельник<br /><span class="month-date">18</span></p>
                     </span>
                     <span class="d-tuesday">
-                        <p>Вторник<br />19</p>
+                        <p>Вторник<br /><span class="month-date">19</span></p>
                     </span>
                     <span class="d-wednesday">
-                        <p>Среда<br />20</p>
+                        <p>Среда<br /><span class="month-date">20</span></p>
                     </span>
                     <span class="d-thursday">
-                        <p>Четверг<br />21</p>
+                        <p>Четверг<br /><span class="month-date">21</span></p>
                     </span>
                     <span class="d-friday">
-                        <p>Пятница<br />22</p>
+                        <p>Пятница<br /><span class="month-date">22</span></p>
                     </span>
                     <span class="d-saturday">
-                        <p>Суббота<br />23</p>
+                        <p>Суббота<br /><span class="month-date">23</span></p>
                     </span>
                 </div>
                 <div class="pairs">
-                    <div class="p-monday m-left mn-wdth">
-                        <div class="pair 1st"></div>
-                        <div class="pair 2nd"></div>
-                        <div class="pair 3rd"></div>
-                        <div class="pair 4th"></div>
+                    <div id="p-monday" class="day p-monday m-left mn-wdth">
                     </div>
-                    <div class="p-tuesday m-all mn-wdth">
-                        <div class="pair 1st"></div>
-                        <div class="pair 2nd"></div>
+                    <div class="day p-tuesday m-all mn-wdth">
+                        <div class="pair first">
+                            <div class="date-time">
+                                <div class="time">09:00 - 10:30</div>
+                                <div class="date">01 сен - 24 дек</div>
+                            </div>
+                            <div class="rooms">
+                                <div class="room">ПР1405</div>
+                                <div class="room">ПР2405</div>
+                            </div>
+                            <div class="discipline">Проектная деятельность (Практика)</div>
+                            <div class="teachers">
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                            </div>
+                        </div>
+                        <div class="pair second">
+                            <div class="date-time">
+                                <div class="time">10:40 - 12:10</div>
+                                <div class="date">01 сен - 24 дек</div>
+                            </div>
+                            <div class="rooms">
+                                <div class="room">ПР1405</div>
+                                <div class="room">ПР2405</div>
+                            </div>
+                            <div class="discipline">Проектная деятельность (Практика)</div>
+                            <div class="teachers">
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-wednesday m-all mn-wdth">
-                        <div class="pair 1st"></div>
-                        <div class="pair 2nd"></div>
-                        <div class="pair 3rd"></div>
-                        <div class="pair 4th"></div>
+                    <div class="day p-wednesday m-all mn-wdth">
+                        <div class="pair first">
+                            <div class="date-time">
+                                <div class="time">09:00 - 10:30</div>
+                                <div class="date">01 сен - 24 дек</div>
+                            </div>
+                            <div class="rooms">
+                                <div class="room">ПР1405</div>
+                                <div class="room">ПР2405</div>
+                            </div>
+                            <div class="discipline">Проектная деятельность (Практика)</div>
+                            <div class="teachers">
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                            </div>
+                        </div>
+                        <div class="pair second">
+                            <div class="date-time">
+                                <div class="time">10:40 - 12:10</div>
+                                <div class="date">01 сен - 24 дек</div>
+                            </div>
+                            <div class="rooms">
+                                <div class="room">ПР1405</div>
+                                <div class="room">ПР2405</div>
+                            </div>
+                            <div class="discipline">Проектная деятельность (Практика)</div>
+                            <div class="teachers">
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                            </div>
+                        </div>
+                        <div class="pair third">
+                            <div class="date-time">
+                                <div class="time">12:20 - 13:50</div>
+                                <div class="date">01 сен - 24 дек</div>
+                            </div>
+                            <div class="rooms">
+                                <div class="room">ПР1405</div>
+                                <div class="room">ПР2405</div>
+                            </div>
+                            <div class="discipline">Проектная деятельность (Практика)</div>
+                            <div class="teachers">
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-thursday m-all mn-wdth">
-                        <div class="pair 1st"></div>
-                        <div class="pair 2nd"></div>
-                        <div class="pair 3rd"></div>
+                    <div class="day p-thursday m-all mn-wdth">
+                        <div class="pair first">
+                            <div class="date-time">
+                                <div class="time">09:00 - 10:30</div>
+                                <div class="date">01 сен - 24 дек</div>
+                            </div>
+                            <div class="rooms">
+                                <div class="room">ПР1405</div>
+                                <div class="room">ПР2405</div>
+                            </div>
+                            <div class="discipline">Проектная деятельность (Практика)</div>
+                            <div class="teachers">
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                            </div>
+                        </div>
+                        <div class="pair second">
+                            <div class="date-time">
+                                <div class="time">10:40 - 12:10</div>
+                                <div class="date">01 сен - 24 дек</div>
+                            </div>
+                            <div class="rooms">
+                                <div class="room">ПР1405</div>
+                                <div class="room">ПР2405</div>
+                            </div>
+                            <div class="discipline">Проектная деятельность (Практика)</div>
+                            <div class="teachers">
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                            </div>
+                        </div>
+                        <div class="pair third">
+                            <div class="date-time">
+                                <div class="time">12:20 - 13:50</div>
+                                <div class="date">01 сен - 24 дек</div>
+                            </div>
+                            <div class="rooms">
+                                <div class="room">ПР1405</div>
+                                <div class="room">ПР2405</div>
+                            </div>
+                            <div class="discipline">Проектная деятельность (Практика)</div>
+                            <div class="teachers">
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                            </div>
+                        </div>
+                        <div class="pair fourth">
+                            <div class="date-time">
+                                <div class="time">14:30 - 16:00</div>
+                                <div class="date">01 сен - 24 дек</div>
+                            </div>
+                            <div class="rooms">
+                                <div class="room">ПР1405</div>
+                                <div class="room">ПР2405</div>
+                            </div>
+                            <div class="discipline">Проектная деятельность (Практика)</div>
+                            <div class="teachers">
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-friday m-all mn-wdth">
-                        <div class="pair 1st"></div>
-                        <div class="pair 2nd"></div>
-                        <div class="pair 3rd"></div>
-                        <div class="pair 4th"></div>
+                    <div class="day p-friday m-all mn-wdth">
+                        <div class="pair first">
+                            <div class="date-time">
+                                <div class="time">09:00 - 10:30</div>
+                                <div class="date">01 сен - 24 дек</div>
+                            </div>
+                            <div class="rooms">
+                                <div class="room">ПР1405</div>
+                                <div class="room">ПР2405</div>
+                            </div>
+                            <div class="discipline">Проектная деятельность (Практика)</div>
+                            <div class="teachers">
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                            </div>
+                        </div>
+                        <div class="pair second">
+                            <div class="date-time">
+                                <div class="time">10:40 - 12:10</div>
+                                <div class="date">01 сен - 24 дек</div>
+                            </div>
+                            <div class="rooms">
+                                <div class="room">ПР1405</div>
+                                <div class="room">ПР2405</div>
+                            </div>
+                            <div class="discipline">Проектная деятельность (Практика)</div>
+                            <div class="teachers">
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                            </div>
+                        </div>
+                        <div class="pair third">
+                            <div class="date-time">
+                                <div class="time">12:20 - 13:50</div>
+                                <div class="date">01 сен - 24 дек</div>
+                            </div>
+                            <div class="rooms">
+                                <div class="room">ПР1405</div>
+                                <div class="room">ПР2405</div>
+                            </div>
+                            <div class="discipline">Проектная деятельность (Практика)</div>
+                            <div class="teachers">
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                            </div>
+                        </div>
+                        <div class="pair fourth">
+                            <div class="date-time">
+                                <div class="time">14:30 - 16:00</div>
+                                <div class="date">01 сен - 24 дек</div>
+                            </div>
+                            <div class="rooms">
+                                <div class="room">ПР1405</div>
+                                <div class="room">ПР2405</div>
+                            </div>
+                            <div class="discipline">Проектная деятельность (Практика)</div>
+                            <div class="teachers">
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                            </div>
+                        </div>
+                        <div class="pair fifth">
+                            <div class="date-time">
+                                <div class="time">16:10 - 17:40</div>
+                                <div class="date">01 сен - 24 дек</div>
+                            </div>
+                            <div class="rooms">
+                                <div class="room">ПР1405</div>
+                                <div class="room">ПР2405</div>
+                            </div>
+                            <div class="discipline">Проектная деятельность (Практика)</div>
+                            <div class="teachers">
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-saturday m-right mn-wdth">
-                        <div class="pair 1st"></div>
-                        <div class="pair 2nd"></div>
-                        <div class="pair 3rd"></div>
-                        <div class="pair 4th"></div>
+                    <div class="day p-saturday m-right mn-wdth">
+                        <div class="pair first">
+                            <div class="date-time">
+                                <div class="time">09:00 - 10:30</div>
+                                <div class="date">01 сен - 24 дек</div>
+                            </div>
+                            <div class="rooms">
+                                <div class="room">ПР1405</div>
+                                <div class="room">ПР2405</div>
+                            </div>
+                            <div class="discipline">Проектная деятельность (Практика)</div>
+                            <div class="teachers">
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                            </div>
+                        </div>
+                        <div class="pair second">
+                            <div class="date-time">
+                                <div class="time">10:40 - 12:10</div>
+                                <div class="date">01 сен - 24 дек</div>
+                            </div>
+                            <div class="rooms">
+                                <div class="room">ПР1405</div>
+                                <div class="room">ПР2405</div>
+                            </div>
+                            <div class="discipline">Проектная деятельность (Практика)</div>
+                            <div class="teachers">
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                            </div>
+                        </div>
+                        <div class="pair third">
+                            <div class="date-time">
+                                <div class="time">12:20 - 13:50</div>
+                                <div class="date">01 сен - 24 дек</div>
+                            </div>
+                            <div class="rooms">
+                                <div class="room">ПР1405</div>
+                                <div class="room">ПР2405</div>
+                            </div>
+                            <div class="discipline">Проектная деятельность (Практика)</div>
+                            <div class="teachers">
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                            </div>
+                        </div>
+                        <div class="pair fourth">
+                            <div class="date-time">
+                                <div class="time">14:30 - 16:00</div>
+                                <div class="date">01 сен - 24 дек</div>
+                            </div>
+                            <div class="rooms">
+                                <div class="room">ПР1405</div>
+                                <div class="room">ПР2405</div>
+                            </div>
+                            <div class="discipline">Проектная деятельность (Практика)</div>
+                            <div class="teachers">
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                            </div>
+                        </div>
+                        <div class="pair fifth">
+                            <div class="date-time">
+                                <div class="time">16:10 - 17:40</div>
+                                <div class="date">01 сен - 24 дек</div>
+                            </div>
+                            <div class="rooms">
+                                <div class="room">ПР1405</div>
+                                <div class="room">ПР2405</div>
+                            </div>
+                            <div class="discipline">Проектная деятельность (Практика)</div>
+                            <div class="teachers">
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                            </div>
+                        </div>
+                        <div class="pair sixth">
+                            <div class="date-time">
+                                <div class="time">17:50 - 19:20</div>
+                                <div class="date">01 сен - 24 дек</div>
+                            </div>
+                            <div class="rooms">
+                                <div class="room">ПР1405</div>
+                                <div class="room">ПР2405</div>
+                            </div>
+                            <div class="discipline">Проектная деятельность (Практика)</div>
+                            <div class="teachers">
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                                <div class="teacher">Малыхина Ксения Андреевна</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

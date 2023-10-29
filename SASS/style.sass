@@ -1,11 +1,21 @@
 ::-webkit-scrollbar
   width: 0
+
+@font-face 
+    font-family: 'Verdana'
+    src: url('../fonts/Verdana.ttf') format('opentype')
+    font-weight: 300
+@font-face 
+    font-family: 'Verdana'
+    src: url('../fonts/Verdana-Bold.ttf') format('opentype')
+    font-weight: 700
+
 body
     display: grid
     grid-template-rows: auto 1fr auto
     margin: 0
     height: 100vh
-    font-family: Montserrat
+    font-family: Verdana
     main
         display: grid
         grid-template-columns: 70px 1fr
@@ -73,17 +83,18 @@ body
                     justify-items: center
                     text-align: center
                     font-weight: 600
+                    .month-date
+                        font-weight: 400
                 .pairs
                     display: grid
                     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
-                    div
+                    .day
                         background-color: #f8f8f8
                         border-radius: 15px
                         overflow-y: auto
                         margin: 10px 5px 10px 0px
                         align-self: start
-                        min-height: 300px
-                        max-height: 53vh
+                        max-height: 57vh
                     .m-all
                         margin: 10px 5px 10px 5px
                     .m-right
@@ -93,9 +104,65 @@ body
                     .pair
                         background-color: #dddddd
                         margin: 10px
-                        min-height: 180px    
-                    
-                    
+                        padding: 10px
+                        max-height: 130px
+                        border-radius: 15px
+                        display: flex
+                        flex-direction: column
+                        font-size: 13px
+                        .date-time
+                            display: flex
+                            flex-direction: row
+                            justify-content: space-between
+                            align-items: center
+                            margin-bottom: 5px
+                            .time
+                                color: #ffffff
+                                font-weight: 700
+                                font-size: 14px
+                                padding: 5px 10px 5px
+                                border-radius: 20px
+                                white-space: nowrap
+                                overflow: hidden
+                                text-overflow: ellipsis
+                            .date
+                                font-size: 11px
+                        .rooms
+                            display: flex
+                            flex-direction: row
+                            .room
+                                margin-right: 10px
+                                text-decoration: underline
+                                font-size: 14px
+                        .discipline
+                            margin: 10px 0 5px
+                            font-weight: 700
+                        .teacher
+                            white-space: nowrap
+                            overflow: hidden
+                            text-overflow: ellipsis
+                    .first
+                        .time
+                            background-color: #9258C8
+                    .second
+                        .time
+                            background-color: #C8509D
+                    .third
+                        .time
+                            background-color: #3FA9A9
+                    .fourth
+                        .time
+                            background-color: #5863C8
+                    // .fifth
+                    //     .time
+                    //         background-color: #
+                    // .sixth
+                    //     .time
+                    //         background-color: #
+                    // .seventh
+                    //     .time
+                    //         background-color: #
+
     footer 
         display: grid
         grid-template-rows: 1fr 25px
