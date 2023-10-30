@@ -10,37 +10,51 @@
     src: url('../fonts/Verdana-Bold.ttf') format('opentype')
     font-weight: 700
 
+::selection 
+    background-color: #6E6E6E
+    color: #ffffff
+
 body
-    display: grid
-    grid-template-rows: auto 1fr auto
+    display: flex
+    flex-direction: column
+    // display: grid
+    // grid-template-rows: auto 1fr auto
     margin: 0
     height: 100vh
     font-family: Verdana
     main
-        display: grid
-        grid-template-columns: 70px 1fr
+        display: flex
+        // display: grid
+        // grid-template-columns: 70px 1fr
         .sidebar
-            display: grid
             align-items: center
             text-align: center
             color: #fffefe
             background-color: #1e1e1e
             margin-top: 0
+            min-width: 70px
             a
                 color: inherit
                 text-decoration: none
         .content
-            margin: 7vh 4vw 2vh 4vw
-            display: grid
-            grid-template-rows: 70px auto
+            margin: 3vh 4vw 2vh 4vw
+            display: flex
+            flex-direction: column 
+            // height: 100vh
+            // display: grid
+            // grid-template-rows: 70px auto
             .top
-                display: grid
-                grid-template-columns: 1fr 1fr
-                max-height: 40px
+                display: flex
+                justify-content: space-between
+                // display: grid
+                // grid-template-columns: 1fr 1fr
+                margin-bottom: 20px
                 .t-links
-                    display: grid
-                    grid-template-columns: 300px 300px 1fr
+                    display: flex
+                    // display: grid
+                    // grid-template-columns: 300px 300px 1fr
                     a
+                        margin-right: clamp(10px, 3vw, 100px)
                         color: inherit
                         text-decoration: none
                         font-size: 16px
@@ -48,8 +62,9 @@ body
                         display: flex
                         align-items: center
                 .t-inputs
-                    display: grid
-                    grid-template-columns: 1fr 250px 250px 
+                    display: flex
+                    // display: grid
+                    // grid-template-columns: 1fr 250px 250px 
                     justify-items: right
                     a
                         color: inherit
@@ -72,97 +87,105 @@ body
                             .right
                                 order: 1
             .schedule
+                //min-width: 1200px
+                //max-width: calc(100vw - 70px - 4vw - 4vw)
+                overflow-x: auto
+            .days
                 display: grid
-                grid-template-rows: 70px auto
-                .days
-                    display: grid
-                    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+                background-color: #f8f8f8
+                color: #333333
+                border-radius: 15px
+                justify-items: center
+                text-align: center
+                font-weight: 600
+                min-width: 1070px
+                .month-date
+                    font-weight: 400
+            .pairs
+                display: flex
+                flex-direction: row
+                // display: grid
+                // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+                .day
                     background-color: #f8f8f8
-                    color: #333333
                     border-radius: 15px
-                    justify-items: center
-                    text-align: center
-                    font-weight: 600
-                    .month-date
-                        font-weight: 400
-                .pairs
-                    display: grid
-                    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
-                    .day
-                        background-color: #f8f8f8
-                        border-radius: 15px
-                        overflow-y: auto
-                        margin: 10px 5px 10px 0px
-                        align-self: start
-                        max-height: 57vh
-                    .m-all
-                        margin: 10px 5px 10px 5px
-                    .m-right
-                        margin: 10px 0px 10px 5px
-                    .mn-wdth
-                        min-width: 170px
-                    .pair
-                        background-color: #dddddd
-                        margin: 10px
-                        padding: 10px
-                        max-height: 130px
-                        border-radius: 15px
+                    overflow-y: auto
+                    margin: 10px 5px 10px 0px
+                    align-self: start
+                    //max-height: calc(100vh - 200px - 70px - 40px - 3vh - 2vh - 20px - 10px)
+                    min-height: 165px
+                .m-all
+                    margin: 10px 5px 10px 5px
+                .m-right
+                    margin: 10px 0px 10px 5px
+                .mn-wdth
+                    min-width: 170px
+                .pair
+                    background-color: #dddddd
+                    margin: 10px
+                    padding: 10px
+                    max-height: 130px
+                    border-radius: 15px
+                    display: flex
+                    flex-direction: column
+                    font-size: 13px
+                    .date-time
                         display: flex
-                        flex-direction: column
-                        font-size: 13px
-                        .date-time
-                            display: flex
-                            flex-direction: row
-                            justify-content: space-between
-                            align-items: center
-                            margin-bottom: 5px
-                            .time
-                                color: #ffffff
-                                font-weight: 700
-                                font-size: 14px
-                                padding: 5px 10px 5px
-                                border-radius: 20px
-                                white-space: nowrap
-                                overflow: hidden
-                                text-overflow: ellipsis
-                            .date
-                                font-size: 11px
-                        .rooms
-                            display: flex
-                            flex-direction: row
-                            .room
-                                margin-right: 10px
-                                text-decoration: underline
-                                font-size: 14px
-                        .discipline
-                            margin: 10px 0 5px
+                        flex-direction: row
+                        justify-content: space-between
+                        align-items: center
+                        margin-bottom: 5px
+                        .time
+                            color: #ffffff
                             font-weight: 700
-                        .teacher
+                            font-size: 14px
+                            padding: 5px 10px 5px
+                            border-radius: 20px
                             white-space: nowrap
                             overflow: hidden
                             text-overflow: ellipsis
-                    .first
-                        .time
-                            background-color: #9258C8
-                    .second
-                        .time
-                            background-color: #C8509D
-                    .third
-                        .time
-                            background-color: #3FA9A9
-                    .fourth
-                        .time
-                            background-color: #5863C8
-                    // .fifth
-                    //     .time
-                    //         background-color: #
-                    // .sixth
-                    //     .time
-                    //         background-color: #
-                    // .seventh
-                    //     .time
-                    //         background-color: #
-
+                        .date
+                            font-size: 11px
+                    .rooms
+                        display: flex
+                        flex-direction: row
+                        .room
+                            margin-right: 10px
+                            text-decoration: underline
+                            font-size: 14px
+                    .discipline
+                        margin: 10px 0 5px
+                        font-weight: 700
+                        display: -webkit-box
+                        -webkit-line-clamp: 2
+                        -webkit-box-orient: vertical
+                        overflow: hidden
+                    .teacher
+                        white-space: nowrap
+                        overflow: hidden
+                        text-overflow: ellipsis
+                .first
+                    .time
+                        background-color: #9258C8
+                .second
+                    .time
+                        background-color: #C8509D
+                .third
+                    .time
+                        background-color: #3FA9A9
+                .fourth
+                    .time
+                        background-color: #5863C8
+                // .fifth
+                //     .time
+                //         background-color: #
+                // .sixth
+                //     .time
+                //         background-color: #
+                // .seventh
+                //     .time
+                //         background-color: #
     footer 
         display: grid
         grid-template-rows: 1fr 25px
@@ -180,6 +203,45 @@ body
                 font-weight: 600
                 text-decoration: none
                 font-size: 18px
+                white-space: nowrap
+                overflow: hidden
+                text-overflow: ellipsis
         .copyright
             text-align: center
             color: #bbbbbb
+
+@media (max-width: 400px) 
+    .sidebar
+        display: none
+    .day
+        max-height: calc(100vh - 200px - 70px - 160px - 3vh - 2vh - 20px - 10px)
+    .schedule
+        max-width: calc(100vw - 4vw - 4vw)
+        
+@media (min-width: 401px)
+    .sidebar
+        display: grid
+    .day
+        max-height: calc(100vh - 200px - 70px - 40px - 3vh - 2vh - 20px - 10px - 100px) // last 100 px is unknown where
+    .schedule
+        max-width: calc(100vw - 70px - 4vw - 4vw)
+
+@media (max-width: 855px)
+    .top
+        max-height: 160px
+    .top, .t-links, .t-inputs
+        flex-direction: column
+        margin-bottom: 10px
+        a
+            display: flex
+            justify-content: center
+            margin-bottom: 10px
+        div
+            justify-content: center
+
+@media (min-width: 856px)
+    .t-inputs
+        a
+            margin-left: 20px
+    .day
+        max-height: calc(100vh - 200px - 70px - 40px - 3vh - 2vh - 20px - 10px)

@@ -12,44 +12,48 @@
   src: url("../fonts/Verdana-Bold.ttf") format("opentype");
   font-weight: 700;
 }
+::selection {
+  background-color: #6E6E6E;
+  color: #ffffff;
+}
+
 body {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   height: 100vh;
   font-family: Verdana;
 }
 body main {
-  display: grid;
-  grid-template-columns: 70px 1fr;
+  display: flex;
 }
 body main .sidebar {
-  display: grid;
   align-items: center;
   text-align: center;
   color: #fffefe;
   background-color: #1e1e1e;
   margin-top: 0;
+  min-width: 70px;
 }
 body main .sidebar a {
   color: inherit;
   text-decoration: none;
 }
 body main .content {
-  margin: 7vh 4vw 2vh 4vw;
-  display: grid;
-  grid-template-rows: 70px auto;
+  margin: 3vh 4vw 2vh 4vw;
+  display: flex;
+  flex-direction: column;
 }
 body main .content .top {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  max-height: 40px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 body main .content .top .t-links {
-  display: grid;
-  grid-template-columns: 300px 300px 1fr;
+  display: flex;
 }
 body main .content .top .t-links a {
+  margin-right: clamp(10px, 3vw, 100px);
   color: inherit;
   text-decoration: none;
   font-size: 16px;
@@ -58,8 +62,7 @@ body main .content .top .t-links a {
   align-items: center;
 }
 body main .content .top .t-inputs {
-  display: grid;
-  grid-template-columns: 1fr 250px 250px;
+  display: flex;
   justify-items: right;
 }
 body main .content .top .t-inputs a {
@@ -86,10 +89,9 @@ body main .content .top .t-inputs a .calendar .right {
   order: 1;
 }
 body main .content .schedule {
-  display: grid;
-  grid-template-rows: 70px auto;
+  overflow-x: auto;
 }
-body main .content .schedule .days {
+body main .content .days {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   background-color: #f8f8f8;
@@ -98,32 +100,33 @@ body main .content .schedule .days {
   justify-items: center;
   text-align: center;
   font-weight: 600;
+  min-width: 1070px;
 }
-body main .content .schedule .days .month-date {
+body main .content .days .month-date {
   font-weight: 400;
 }
-body main .content .schedule .pairs {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+body main .content .pairs {
+  display: flex;
+  flex-direction: row;
 }
-body main .content .schedule .pairs .day {
+body main .content .pairs .day {
   background-color: #f8f8f8;
   border-radius: 15px;
   overflow-y: auto;
   margin: 10px 5px 10px 0px;
   align-self: start;
-  max-height: 57vh;
+  min-height: 165px;
 }
-body main .content .schedule .pairs .m-all {
+body main .content .pairs .m-all {
   margin: 10px 5px 10px 5px;
 }
-body main .content .schedule .pairs .m-right {
+body main .content .pairs .m-right {
   margin: 10px 0px 10px 5px;
 }
-body main .content .schedule .pairs .mn-wdth {
+body main .content .pairs .mn-wdth {
   min-width: 170px;
 }
-body main .content .schedule .pairs .pair {
+body main .content .pairs .pair {
   background-color: #dddddd;
   margin: 10px;
   padding: 10px;
@@ -133,14 +136,14 @@ body main .content .schedule .pairs .pair {
   flex-direction: column;
   font-size: 13px;
 }
-body main .content .schedule .pairs .pair .date-time {
+body main .content .pairs .pair .date-time {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 5px;
 }
-body main .content .schedule .pairs .pair .date-time .time {
+body main .content .pairs .pair .date-time .time {
   color: #ffffff;
   font-weight: 700;
   font-size: 14px;
@@ -150,37 +153,41 @@ body main .content .schedule .pairs .pair .date-time .time {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-body main .content .schedule .pairs .pair .date-time .date {
+body main .content .pairs .pair .date-time .date {
   font-size: 11px;
 }
-body main .content .schedule .pairs .pair .rooms {
+body main .content .pairs .pair .rooms {
   display: flex;
   flex-direction: row;
 }
-body main .content .schedule .pairs .pair .rooms .room {
+body main .content .pairs .pair .rooms .room {
   margin-right: 10px;
   text-decoration: underline;
   font-size: 14px;
 }
-body main .content .schedule .pairs .pair .discipline {
+body main .content .pairs .pair .discipline {
   margin: 10px 0 5px;
   font-weight: 700;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
-body main .content .schedule .pairs .pair .teacher {
+body main .content .pairs .pair .teacher {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-body main .content .schedule .pairs .first .time {
+body main .content .pairs .first .time {
   background-color: #9258C8;
 }
-body main .content .schedule .pairs .second .time {
+body main .content .pairs .second .time {
   background-color: #C8509D;
 }
-body main .content .schedule .pairs .third .time {
+body main .content .pairs .third .time {
   background-color: #3FA9A9;
 }
-body main .content .schedule .pairs .fourth .time {
+body main .content .pairs .fourth .time {
   background-color: #5863C8;
 }
 body footer {
@@ -203,8 +210,59 @@ body footer .ft-links a {
   font-weight: 600;
   text-decoration: none;
   font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 body footer .copyright {
   text-align: center;
   color: #bbbbbb;
+}
+
+@media (max-width: 400px) {
+  .sidebar {
+    display: none;
+  }
+  .day {
+    max-height: calc(100vh - 200px - 70px - 160px - 3vh - 2vh - 20px - 10px);
+  }
+  .schedule {
+    max-width: 92vw;
+  }
+}
+@media (min-width: 401px) {
+  .sidebar {
+    display: grid;
+  }
+  .day {
+    max-height: calc(100vh - 200px - 70px - 40px - 3vh - 2vh - 20px - 10px - 100px);
+  }
+  .schedule {
+    max-width: calc(100vw - 70px - 4vw - 4vw);
+  }
+}
+@media (max-width: 855px) {
+  .top {
+    max-height: 160px;
+  }
+  .top, .t-links, .t-inputs {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .top a, .t-links a, .t-inputs a {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .top div, .t-links div, .t-inputs div {
+    justify-content: center;
+  }
+}
+@media (min-width: 856px) {
+  .t-inputs a {
+    margin-left: 20px;
+  }
+  .day {
+    max-height: calc(100vh - 200px - 70px - 40px - 3vh - 2vh - 20px - 10px);
+  }
 }/*# sourceMappingURL=style.css.map */
