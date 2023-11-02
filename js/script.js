@@ -31,17 +31,23 @@ function addPair(pairData, pairNumber) {
     pair.innerHTML = `
                         <div class="date-time">
                             <div class="time">${pairNumberToPairTime(pairNumber)}</div>
-                            <div class="date">${convertDate(pairData[0]["df"])} - ${convertDate(pairData[0]["dt"])}</div>
+                            <div class="date">${convertDate(pairData["df"])} - ${convertDate(pairData["dt"])}</div>
                         </div>
                         <div class="rooms">
-                            <div class="room">${pairData[0]["shortRooms"]}</div>
+                            <div class="room">${pairData["shortRooms"]}</div>
                         </div>
-                        <div class="discipline">${pairData[0]["sbj"]} (${pairData[0]["type"]})</div>
+                        <div class="discipline">${pairData["sbj"]} (${pairData["type"]})</div>
                         <div class="teachers">
-                            <div class="teacher">${pairData[0]["teacher"]}</div>
+                            <div class="teacher">${pairData["teacher"]}</div>
                         </div>
                      `;
     (_a = document.getElementById('monday')) === null || _a === void 0 ? void 0 : _a.appendChild(pair);
 }
-addPair(jsonData["tuesday"]["fourth"], "fourth");
+function addTimeSlot(slotData, pairNumber) {
+    for (let data of slotData) {
+        addPair(data, "fourth");
+    }
+}
+addTimeSlot(jsonData["tuesday"]["fourth"], "fourth");
+//addPair(jsonData["tuesday"]["fourth"], "fourth")
 console.log("Ok");
