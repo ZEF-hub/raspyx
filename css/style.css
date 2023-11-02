@@ -110,6 +110,7 @@ body main .content .pairs {
   flex-direction: row;
 }
 body main .content .pairs .day {
+  flex: 1 1 0px;
   background-color: #f8f8f8;
   border-radius: 15px;
   overflow-y: auto;
