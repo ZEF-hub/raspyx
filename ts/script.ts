@@ -16,15 +16,28 @@ function convertDate(date: string): string{
     return splittedDate[2] + " " + monthNames[parseInt(splittedDate[1]) - 1]
 }
 
+function pairNumberToPairTime(pairNumber: string): string{
+    let pairs: {[key: string]: string} = {
+        "first": "09:00 - 10:30",
+        "second": "10:40 - 12:10",
+        "third": "12:20 - 13:50",
+        "fourth": "14:30 - 16:00",
+        "fifth": "16:10 - 17:40",
+        "sixth": "17:50 - 19:20",
+        "seventh": "19:30 - 21:00",
+    }
+    return pairs[pairNumber]
+}
+
 // console.log(jsonData["tuesday"]["fourth"]);
 
-function addPair(pairData: [{[key: string]: object}], pairNumber: string): void{
+function addPair(pairData: [{[key: string]: any}], pairNumber: string): void{
     let pair = document.createElement("div")
     pair.setAttribute('class', `pair ${pairNumber}`)
     pair.innerHTML = `
                         <div class="date-time">
-                            <div class="time">09:00 - 10:30</div>
-                            <div class="date">${pairData[0]["df"]} - ${pairData[0]["dt"]}</div>
+                            <div class="time">${pairNumberToPairTime(pairNumber)}</div>
+                            <div class="date">${convertDate(pairData[0]["df"])} - ${convertDate(pairData[0]["dt"])}</div>
                         </div>
                         <div class="rooms">
                             <div class="room">${pairData[0]["shortRooms"]}</div>
