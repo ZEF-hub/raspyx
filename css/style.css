@@ -116,7 +116,6 @@ body main .content .pairs .day {
   overflow-y: auto;
   margin: 10px 5px 10px 0px;
   align-self: start;
-  min-height: 165px;
 }
 body main .content .pairs .m-all {
   margin: 10px 5px 10px 5px;
@@ -156,6 +155,11 @@ body main .content .pairs .pair .date-time .time {
 }
 body main .content .pairs .pair .date-time .date {
   font-size: 11px;
+  text-align: right;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 body main .content .pairs .pair .rooms {
   display: flex;
@@ -165,31 +169,45 @@ body main .content .pairs .pair .rooms .room {
   margin-right: 10px;
   text-decoration: underline;
   font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 body main .content .pairs .pair .discipline {
   margin: 10px 0 5px;
-  font-weight: 700;
+  font-weight: 600;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 body main .content .pairs .pair .teacher {
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 body main .content .pairs .first .time {
-  background-color: #9258C8;
+  background-color: #9987FF;
 }
 body main .content .pairs .second .time {
-  background-color: #C8509D;
+  background-color: #FF87FF;
 }
 body main .content .pairs .third .time {
-  background-color: #3FA9A9;
+  background-color: #86e673;
 }
 body main .content .pairs .fourth .time {
-  background-color: #5863C8;
+  background-color: #6fa0ee;
+}
+body main .content .pairs .fifth .time {
+  background-color: #fabc71;
+}
+body main .content .pairs .sixth .time {
+  background-color: #3ccedb;
+}
+body main .content .pairs .seventh .time {
+  background-color: #FF8787;
 }
 body footer {
   display: grid;

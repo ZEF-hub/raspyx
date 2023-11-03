@@ -29,11 +29,11 @@ function addPair(pairData, pairNumber) {
                             <div class="date">${convertDate(pairData["df"])} - ${convertDate(pairData["dt"])}</div>
                         </div>
                         <div class="rooms">
-                            <div class="room">${pairData["shortRooms"]}</div>
+                            <div class="room">${pairData["shortRooms"].map((room) => room.charAt(0).toUpperCase() + room.slice(1)).join(" ")}</div>
                         </div>
                         <div class="discipline">${pairData["sbj"]} (${pairData["type"]})</div>
                         <div class="teachers">
-                            <div class="teacher">${pairData["teacher"]}</div>
+                            <div class="teacher">${pairData["teacher"].replace(", ", "<br>")}</div>
                         </div>
                      `;
     return pair;

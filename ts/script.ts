@@ -33,11 +33,11 @@ function addPair(pairData: {[key: string]: any}, pairNumber: string): HTMLDivEle
                             <div class="date">${convertDate(pairData["df"])} - ${convertDate(pairData["dt"])}</div>
                         </div>
                         <div class="rooms">
-                            <div class="room">${pairData["shortRooms"]}</div>
+                            <div class="room">${pairData["shortRooms"].map((room: string) => room.charAt(0).toUpperCase() + room.slice(1)).join(" ")}</div>
                         </div>
                         <div class="discipline">${pairData["sbj"]} (${pairData["type"]})</div>
                         <div class="teachers">
-                            <div class="teacher">${pairData["teacher"]}</div>
+                            <div class="teacher">${pairData["teacher"].replace(", ", "<br>")}</div>
                         </div>
                      `
 
@@ -79,8 +79,6 @@ addSchedule(jsonData)
 
 // addTimeSlot(jsonData["tuesday"]["fourth"], "fourth")
 //addPair(jsonData["tuesday"]["fourth"], "fourth")
-
-
 
 console.log("Ok")
 

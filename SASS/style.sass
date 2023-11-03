@@ -115,7 +115,7 @@ body
                     margin: 10px 5px 10px 0px
                     align-self: start
                     //max-height: calc(100vh - 200px - 70px - 40px - 3vh - 2vh - 20px - 10px)
-                    min-height: 165px
+                    // min-height: 165px
                 .m-all
                     margin: 10px 5px 10px 5px
                 .m-right
@@ -148,6 +148,11 @@ body
                             text-overflow: ellipsis
                         .date
                             font-size: 11px
+                            text-align: right
+                            display: -webkit-box
+                            -webkit-line-clamp: 2
+                            -webkit-box-orient: vertical
+                            overflow: hidden
                     .rooms
                         display: flex
                         flex-direction: row
@@ -155,38 +160,43 @@ body
                             margin-right: 10px
                             text-decoration: underline
                             font-size: 14px
+                            white-space: nowrap
+                            overflow: hidden
+                            text-overflow: ellipsis
                     .discipline
                         margin: 10px 0 5px
-                        font-weight: 700
+                        font-weight: 600
                         display: -webkit-box
                         -webkit-line-clamp: 2
                         -webkit-box-orient: vertical
                         overflow: hidden
                     .teacher
-                        white-space: nowrap
                         overflow: hidden
                         text-overflow: ellipsis
+                        display: -webkit-box
+                        -webkit-line-clamp: 2
+                        -webkit-box-orient: vertical
                 .first
                     .time
-                        background-color: #9258C8
+                        background-color: #9987FF
                 .second
                     .time
-                        background-color: #C8509D
+                        background-color: #FF87FF
                 .third
                     .time
-                        background-color: #3FA9A9
+                        background-color: #86e673
                 .fourth
                     .time
-                        background-color: #5863C8
-                // .fifth
-                //     .time
-                //         background-color: #
-                // .sixth
-                //     .time
-                //         background-color: #
-                // .seventh
-                //     .time
-                //         background-color: #
+                        background-color: #6fa0ee
+                .fifth
+                    .time
+                        background-color: #fabc71
+                .sixth
+                    .time
+                        background-color: #3ccedb
+                .seventh
+                    .time
+                        background-color: #FF8787
     footer 
         display: grid
         grid-template-rows: 1fr 25px
